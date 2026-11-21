@@ -1,4 +1,7 @@
-![logo](assets/logo.png)
+<div align="center">
+    <img src="assets/logo.png" width=300>
+</div>
+
 
 <h1 align="center">Fast Cashier </h1>
 
