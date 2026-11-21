@@ -11,7 +11,7 @@
 ## Division Members
 
 1. Rafi Sofyan Triyanto - 263140701111013 - T1A (idk)
-2. Salsah Mahadrika - NIM - T1A (idk)
+2. Salsah Ramadhani - NIM - T1A (idk)
 3. Hasan - NIM - T1A (idk)
 
 ## Requirements
