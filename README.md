@@ -10,9 +10,17 @@
 
 ## 🧑‍💻 Divisions Member
 
-1. Rafi Sofyan Triyanto - 263140701111013 - T1A (idk)
-2. Sal Sah Ramadhani - 263140701111026 - T1A (idk)
-3. Hasan - NIM - T1A (idk)
+1. Rafi Sofyan Triyanto - 263140701111013 - T1A 
+    - Repository Setup
+    - Update Feature
+    - Search Feature
+    - Validation
+2. Sal Sah Ramadhani - 263140701111026 - T1A
+
+    - 
+3. Hasan - 263140700111044 - T1A 
+
+    -
 
 ## 📋 Requirements
 - typescript>=6.0.3
