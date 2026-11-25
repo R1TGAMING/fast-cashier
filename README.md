@@ -16,11 +16,11 @@
     - Search Feature
     - Validation
 2. Sal Sah Ramadhani - 263140701111026 - T1A
-
-    - 
+    - Read Feature
+    - Create Feature
 3. Hasan - 263140700111044 - T1A 
-
-    -
+    - Delete Feature
+    - Menu Feature
 
 ## 📋 Requirements
 - typescript>=6.0.3
