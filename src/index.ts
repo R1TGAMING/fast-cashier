@@ -50,11 +50,11 @@ function tampilkanBanner(): void {
 function tampilkanMenu(): void {
   console.log("--- DAFTAR MENU ---");
   // validasi jika menu kosong
-  if (menuItems.length > 0) {
-    for (let i = 0; i < menuItems.length; i++) {
-      const item = menuItems[i];
+  if (itemMenu.length > 0) {
+    for (let i = 0; i < itemMenu.length; i++) {
+      const item = itemMenu[i];
       console.log(
-        `${i + 1}. ${item?.name}      - Rp ${item?.price}         - QTY: ${item?.quantity}`,
+        `${i + 1}. ${item?.name}      - Rp ${item?.price}         - QTY: ${item?.jumlah}`,
       );
     }
   } else {
@@ -67,7 +67,7 @@ function tampilkanMenu(): void {
 function ambilPilihanMenu() {
   // meminta input nomor menu dari user
   const pilihanMenuStr: string = readline.question(
-    `Masukkan nomor menu yang ingin dibeli (1-${itemMenu.length}): `
+    `Masukkan nomor menu yang ingin dibeli (1-${itemMenu.length}): `,
   );
   const pilihanMenu: number = Number(pilihanMenuStr);
 
@@ -78,7 +78,7 @@ function ambilPilihanMenu() {
     pilihanMenu > itemMenu.length
   ) {
     console.log(
-      `Menu tidak valid! Silakan pilih nomor 1 sampai ${itemMenu.length}.\n`
+      `Menu tidak valid! Silakan pilih nomor 1 sampai ${itemMenu.length}.\n`,
     );
     return null;
   }
@@ -88,7 +88,7 @@ function ambilPilihanMenu() {
 
   if (!keranjang) {
     console.log(
-      `Menu tidak valid! Silakan pilih nomor 1 sampai ${itemMenu.length}.\n`
+      `Menu tidak valid! Silakan pilih nomor 1 sampai ${itemMenu.length}.\n`,
     );
     return null;
   }
@@ -97,10 +97,10 @@ function ambilPilihanMenu() {
 }
 
 // meminta dan memvalidasi jumlah item terhadap stok toko
-function ambilJumlah(keranjang:any): number | null {
+function ambilJumlah(keranjang: any): number | null {
   // meminta input jumlah item
   const jumlahStr: string = readline.question(
-    "Masukkan jumlah yang ingin dibeli: "
+    "Masukkan jumlah yang ingin dibeli: ",
   );
   const jumlah: number = Number(jumlahStr);
 
@@ -133,7 +133,7 @@ function prosesItemBelanja(keranjang: any, jumlah: number): void {
 
   // menampilkan informasi pembelanjaan
   console.log(
-    `Berhasil menambahkan ${jumlah}x ${keranjang.name} ke keranjang. (Subtotal sementara: Rp ${subTotal})\n`
+    `Berhasil menambahkan ${jumlah}x ${keranjang.name} ke keranjang. (Subtotal sementara: Rp ${subTotal})\n`,
   );
 }
 
@@ -168,7 +168,7 @@ function main(): void {
 
     // menanyakan apakah ingin membeli lagi, jika iya mengulang ke atas
     const beliLagi: boolean = Boolean(
-      readline.keyInYN("Apakah anda ingin membeli menu lain? ")
+      readline.keyInYN("Apakah anda ingin membeli menu lain? "),
     );
 
     // jika tidak, looping selesai
