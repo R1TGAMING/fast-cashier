@@ -53,7 +53,9 @@ function main(): void {
   if (menuItems.length > 0) {
     for (let i = 0; i < menuItems.length; i++) {
       const item = menuItems[i];
-      console.log(`${i + 1}. ${item?.name}      - Rp ${item?.price}`);
+      console.log(
+        `${i + 1}. ${item?.name}      - Rp ${item?.price}         - QTY: ${item?.quantity}`,
+      );
     }
   } else {
     console.log("Menu Sedang Kosong");
@@ -64,7 +66,7 @@ function main(): void {
   while (isRunning) {
     // meminta input nomor menu dari user
     const menuChoiceStr: string = readline.question(
-      `Masukkan nomor menu yang ingin dibeli (1-${menuItems.length}): `
+      `Masukkan nomor menu yang ingin dibeli (1-${menuItems.length}): `,
     );
     const menuChoice: number = Number(menuChoiceStr);
 
@@ -75,7 +77,7 @@ function main(): void {
       menuChoice > menuItems.length
     ) {
       console.log(
-        `Menu tidak valid! Silakan pilih nomor 1 sampai ${menuItems.length}.\n`
+        `Menu tidak valid! Silakan pilih nomor 1 sampai ${menuItems.length}.\n`,
       );
       continue;
     }
@@ -85,14 +87,14 @@ function main(): void {
 
     if (!selectedItem) {
       console.log(
-        `Menu tidak valid! Silakan pilih nomor 1 sampai ${menuItems.length}.\n`
+        `Menu tidak valid! Silakan pilih nomor 1 sampai ${menuItems.length}.\n`,
       );
       continue;
     }
 
     // meminta input jumlah item
     const quantityStr: string = readline.question(
-      "Masukkan jumlah yang ingin dibeli: "
+      "Masukkan jumlah yang ingin dibeli: ",
     );
     const quantity: number = Number(quantityStr);
 
@@ -108,9 +110,9 @@ function main(): void {
       continue;
     }
 
-    // menyimpan total price item 
+    // menyimpan total price item
     const itemTotal: number = selectedItem.price * quantity;
-    
+
     // mengurangi quantity dengan jumlah item yg dibeli
     selectedItem.quantity -= quantity;
 
@@ -120,12 +122,12 @@ function main(): void {
 
     // menampilkan informasi pembelanjaan
     console.log(
-      `Berhasil menambahkan ${quantity}x ${selectedItem.name} ke keranjang. (Subtotal sementara: Rp ${subTotal})\n`
+      `Berhasil menambahkan ${quantity}x ${selectedItem.name} ke keranjang. (Subtotal sementara: Rp ${subTotal})\n`,
     );
 
     // menanyakan apakah ingin membeli lagi, jika iya mengulang ke atas
     const buyAgain: boolean = Boolean(
-      readline.keyInYN("Apakah anda ingin membeli menu lain? ")
+      readline.keyInYN("Apakah anda ingin membeli menu lain? "),
     );
 
     // jika tidak, looping selesai
