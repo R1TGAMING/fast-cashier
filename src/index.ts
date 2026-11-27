@@ -50,10 +50,12 @@ function tampilkanBanner(): void {
 function tampilkanMenu(): void {
   console.log("--- DAFTAR MENU ---");
   // validasi jika menu kosong
-  if (itemMenu.length > 0) {
-    for (let i = 0; i < itemMenu.length; i++) {
-      const item = itemMenu[i];
-      console.log(`${i + 1}. ${item?.name}      - Rp ${item?.price}`);
+  if (menuItems.length > 0) {
+    for (let i = 0; i < menuItems.length; i++) {
+      const item = menuItems[i];
+      console.log(
+        `${i + 1}. ${item?.name}      - Rp ${item?.price}         - QTY: ${item?.quantity}`,
+      );
     }
   } else {
     console.log("Menu Sedang Kosong");
